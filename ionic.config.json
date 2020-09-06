@@ -1,0 +1,7 @@
+{
+  "name": "xpiry",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
