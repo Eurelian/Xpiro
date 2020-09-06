@@ -1,0 +1,9 @@
+.footer-toolbar {
+	--background: linear-gradient(
+		195deg,
+		rgba(233, 67, 63, 1) 0%,
+		rgba(254, 123, 90, 1) 100%
+	);
+	/* clip-path: circle(60% at 50% 140%); */
+	height: 150px;
+}
