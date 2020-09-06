@@ -23,7 +23,11 @@ const ProductsContextProvider: React.FC = (props) => {
 			return curProducts.concat(newProduct);
 		});
 	};
-	const deleteProduct = () => {};
+	const deleteProduct = (id: string) => {
+		setProducts((curProducts) => {
+			return curProducts.filter((product) => product.id !== id);
+		});
+	};
 
 	const initContext = useCallback(async () => {
 		const productsData = await Storage.get({ key: "productList" });

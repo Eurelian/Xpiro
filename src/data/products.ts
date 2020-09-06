@@ -9,7 +9,7 @@ export interface Product {
 interface ProductListContext {
 	products: Product[];
 	addProduct: (groceryName: string, expiryDate: string) => void;
-	deleteProduct: () => void;
+	deleteProduct: (id: string) => void;
 	initContext: () => void;
 }
 

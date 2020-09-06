@@ -9,6 +9,7 @@ import {
 	IonItem,
 	IonCardTitle,
 	IonCardSubtitle,
+	IonButton,
 } from "@ionic/react";
 import React, { useState, useContext } from "react";
 
@@ -19,7 +20,7 @@ import ProductsContext from "../data/products";
 import "./Home.css";
 
 const Home: React.FC = () => {
-	const { products } = useContext(ProductsContext);
+	const { products, deleteProduct } = useContext(ProductsContext);
 	return (
 		<IonPage>
 			<IonHeader className='ion-no-border header'>
@@ -34,6 +35,9 @@ const Home: React.FC = () => {
 							<IonCard>
 								<IonCardTitle>{item.groceryName}</IonCardTitle>
 								<IonCardSubtitle>{item.expiryDate}</IonCardSubtitle>
+								<IonButton onClick={() => deleteProduct(item.id)}>
+									Delete
+								</IonButton>
 							</IonCard>
 						</IonItem>
 					))}
